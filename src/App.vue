@@ -4,11 +4,13 @@
     <nav class="navbar">
       <div class="nav-container">
         <div class="nav-brand">
-          <img
-            src="/assets/innovative.png"
-            alt="Innovative University College"
-            class="nav-logo"
-          />
+          <a href="#">
+            <img
+              src="/assets/innovative.png"
+              alt="Innovative University College"
+              class="nav-logo"
+            />
+          </a>
         </div>
         <div class="nav-menu" :class="{ active: mobileMenuOpen }">
           <a href="#home" class="nav-link" @click="closeMobileMenu">Home</a>
