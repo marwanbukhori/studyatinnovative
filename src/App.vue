@@ -5,7 +5,7 @@
       <div class="nav-container">
         <div class="nav-brand">
           <img
-            src="/src/assets/innovative.png"
+            src="/assets/innovative.png"
             alt="Innovative University College"
             class="nav-logo"
           />
@@ -40,7 +40,7 @@
           <!-- University Logo -->
           <div class="hero-brand">
             <img
-              src="/src/assets/innovative.png"
+              src="/assets/innovative.png"
               alt="Innovative University College"
               class="hero-logo"
             />
@@ -53,8 +53,8 @@
           <!-- Main Headline -->
           <div class="hero-headline">
             <h1 class="hero-title">
-              Study At
-              <span class="title-highlight">Innovative</span>
+              Launch Your
+              <span class="title-highlight">Business Career</span>
             </h1>
 
             <h2 class="hero-subtitle">
@@ -274,10 +274,7 @@
               </div>
             </div>
             <div class="overview-image">
-              <img
-                src="/src/assets/test.png"
-                alt="Business students studying"
-              />
+              <img src="/assets/test.png" alt="Business students studying" />
             </div>
           </div>
         </div>
@@ -632,7 +629,7 @@
           <div class="footer-brand">
             <div>
               <img
-                src="/src/assets/innovative.png"
+                src="/assets/innovative.png"
                 alt="Innovative University College"
                 class="footer-logo"
               />
@@ -676,23 +673,18 @@ export default {
           title: "Modern Campus",
           description:
             "State-of-the-art facilities designed for contemporary learning",
-          image: "/src/assets/hq.jpg",
+          image: "/assets/hq.jpg",
         },
         {
           title: "Graduation Ceremony",
           description: "Celebrating our students' achievements and success",
-          image: "/src/assets/convocation.webp",
+          image: "/assets/convocation.webp",
         },
         {
           title: "Student Life",
           description: "Vibrant campus community and student activities",
-          image: "/src/assets/students.jpg",
+          image: "/assets/students.jpg",
         },
-        // {
-        //   title: "Innovative Learning",
-        //   description: "Cutting-edge education with modern technology",
-        //   image: "/src/assets/innovative.png",
-        // },
       ],
       faqs: [
         {
