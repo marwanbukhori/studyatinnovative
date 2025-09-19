@@ -1,0 +1,25 @@
+{
+  "name": "study-at-innovative",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "vue",
+    "landing-page",
+    "education",
+    "business-diploma",
+    "study-at-innovative"
+  ],
+  "author": "Marwan",
+  "license": "ISC",
+  "description": "Study At Innovative - Landing page for Diploma in Business Administration (ODL)",
+  "dependencies": {
+    "@vitejs/plugin-vue": "^4.5.0",
+    "vite": "^4.5.0",
+    "vue": "^3.5.21"
+  }
+}
