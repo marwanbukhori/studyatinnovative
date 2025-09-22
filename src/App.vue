@@ -656,7 +656,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; My with love, 2025</p>
+          <p>&copy; 2025</p>
         </div>
       </div>
     </footer>
@@ -692,7 +692,7 @@ export default {
         {
           question: "Is this diploma recognized?",
           answer:
-            "Yes, our Diploma in Business Administration is fully accredited and recognized by relevant authorities.",
+            "Yes, our Diploma in Business Administration is fully Malaysia Qualifications Agency (MQA) accredited and recognized by relevant authorities.",
           isOpen: false,
         },
         {
