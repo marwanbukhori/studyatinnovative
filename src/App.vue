@@ -547,8 +547,8 @@
           <div class="apply-form">
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSd9nQ28V9p_xCF4areiyQOxSCtSLLzy3K9BG4vd6wBEnsY_LA/viewform?embedded=true"
-              width="800"
-              height="800"
+              width="100%"
+              height="650"
               frameborder="0"
               marginheight="0"
               marginwidth="0"
