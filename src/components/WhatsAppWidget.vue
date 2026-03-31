@@ -1,0 +1,225 @@
+<template>
+  <div class="wa-widget" :class="{ open: isOpen }">
+    <div v-if="isOpen" class="wa-popup">
+      <div class="wa-header">
+        <div class="wa-header-info">
+          <img src="/assets/innovative.png" alt="IUC" class="wa-avatar" />
+          <div>
+            <h4>Innovative UC</h4>
+            <p>{{ $t('widget.online') }}</p>
+          </div>
+        </div>
+        <button class="wa-close" @click="isOpen = false" aria-label="Close">&times;</button>
+      </div>
+      <div class="wa-body">
+        <div class="wa-message">
+          <p>{{ $t('widget.greeting') }}</p>
+        </div>
+      </div>
+      <div class="wa-actions">
+        <a
+          :href="'https://wa.me/60135961559?text=' + encodeURIComponent($t('widget.prefill_interest'))"
+          class="wa-action-btn"
+          target="_blank"
+          @click="track('interest')"
+        >
+          {{ $t('widget.btn_interest') }}
+        </a>
+        <a
+          :href="'https://wa.me/60135961559?text=' + encodeURIComponent($t('widget.prefill_payment'))"
+          class="wa-action-btn"
+          target="_blank"
+          @click="track('payment')"
+        >
+          {{ $t('widget.btn_payment') }}
+        </a>
+        <a
+          :href="'https://wa.me/60135961559?text=' + encodeURIComponent($t('widget.prefill_question'))"
+          class="wa-action-btn"
+          target="_blank"
+          @click="track('question')"
+        >
+          {{ $t('widget.btn_question') }}
+        </a>
+      </div>
+    </div>
+    <button class="wa-fab" @click="isOpen = !isOpen" aria-label="WhatsApp">
+      <svg v-if="!isOpen" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
+      </svg>
+      <span v-else class="wa-fab-close">&times;</span>
+    </button>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "WhatsAppWidget",
+  data() {
+    return {
+      isOpen: false,
+    };
+  },
+  methods: {
+    track(context) {
+      if (typeof fbq !== "undefined") fbq("track", "Contact");
+      if (typeof gtag !== "undefined")
+        gtag("event", "whatsapp_click", {
+          event_category: "engagement",
+          event_label: "widget_" + context,
+        });
+      if (typeof ttq !== "undefined") ttq.track("Contact");
+    },
+  },
+};
+</script>
+
+<style scoped>
+.wa-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.wa-fab {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+}
+
+.wa-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
+}
+
+.wa-fab-close {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.wa-popup {
+  position: absolute;
+  bottom: 72px;
+  right: 0;
+  width: 340px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: waSlideUp 0.3s ease;
+}
+
+@keyframes waSlideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.wa-header {
+  background: #075E54;
+  color: white;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wa-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wa-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: white;
+  padding: 4px;
+}
+
+.wa-header h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.wa-header p {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.wa-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.wa-body {
+  padding: 20px 16px;
+  background: #E5DDD5;
+}
+
+.wa-message {
+  background: white;
+  padding: 12px 16px;
+  border-radius: 0 12px 12px 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  max-width: 85%;
+}
+
+.wa-message p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #303030;
+}
+
+.wa-actions {
+  padding: 12px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wa-action-btn {
+  display: block;
+  text-align: center;
+  padding: 10px 16px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.wa-action-btn:hover {
+  background: #128C7E;
+}
+
+@media (max-width: 480px) {
+  .wa-popup {
+    width: calc(100vw - 48px);
+    right: 0;
+  }
+
+  .wa-widget {
+    bottom: 16px;
+    right: 16px;
+  }
+}
+</style>

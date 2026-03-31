@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-MY">
 
 <head>
   <meta charset="UTF-8" />
@@ -12,7 +12,23 @@
   <meta name="description"
     content="Study At Innovative - Flexible online diploma in Business Administration. 2.5 years, 90 credits. Pay only RM5,000 (KWSP eligible). Study at your own pace." />
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://studyatinnovative.com/" />
+  <meta property="og:title" content="Diploma in Business Administration (ODL) — Serendah RM500/bulan" />
+  <meta property="og:description" content="Program Diploma bertauliah MQA. 100% dalam talian. KWSP diterima. 2,814 pelajar aktif. Innovative University College." />
+  <meta property="og:image" content="https://studyatinnovative.com/assets/innovative.png" />
+  <meta property="og:locale" content="en_MY" />
+  <meta property="og:site_name" content="Study At Innovative" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Diploma in Business Administration (ODL) — RM500/bulan" />
+  <meta name="twitter:description" content="MQA accredited. KWSP eligible. 100% online. Innovative University College." />
+  <meta name="twitter:image" content="https://studyatinnovative.com/assets/innovative.png" />
+
   <!-- Meta Pixel Code -->
+  <!-- TODO: Replace YOUR_PIXEL_ID with real Meta Pixel ID from Meta Business Suite -->
   <script>
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
@@ -31,6 +47,7 @@
   <!-- End Meta Pixel Code -->
 
   <!-- Google Analytics -->
+  <!-- TODO: Replace GA_MEASUREMENT_ID with real GA4 ID (format: G-XXXXXXXXXX) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -38,12 +55,33 @@
     gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID');
   </script>
+
+  <!-- TikTok Pixel Code -->
+  <!-- TODO: Replace TIKTOK_PIXEL_ID with real TikTok Pixel ID from TikTok Ads Manager -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+    ttq.load('TIKTOK_PIXEL_ID');
+    ttq.page();
+  }(window, document, 'ttq');
+  </script>
+  <!-- End TikTok Pixel Code -->
+
+  <!-- Microsoft Clarity - Free Heatmaps & Session Recordings -->
+  <!-- TODO: Replace CLARITY_PROJECT_ID with real ID from clarity.microsoft.com -->
+  <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "CLARITY_PROJECT_ID");
+  </script>
 </head>
 
 <body>
   <!-- Facebook Pixel noscript fallback -->
   <noscript>
-    <img height="1" width="1" style="display:none" src="https://www.facebook.com/studyatinnovative" />
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" />
   </noscript>
 
   <div id="app"></div>
