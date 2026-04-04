@@ -69,7 +69,7 @@
 
           <div class="hero-actions">
             <a
-              href="https://wa.me/60135961559?text=I'm%20interested%20in%20the%20Diploma%20in%20Business%20Administration%20course"
+              href="https://wa.me/601159816620?text=I'm%20interested%20in%20the%20Diploma%20in%20Business%20Administration%20course"
               class="btn-whatsapp"
               target="_blank"
               @click="trackWhatsAppClick"
@@ -359,7 +359,7 @@
             <h2>{{ $t('apply.title') }}</h2>
             <p class="apply-subtitle">{{ $t('apply.subtitle') }}</p>
             <a
-              href="https://wa.me/60135961559?text=I'm%20interested%20in%20the%20Diploma%20in%20Business%20Administration%20course"
+              href="https://wa.me/601159816620?text=I'm%20interested%20in%20the%20Diploma%20in%20Business%20Administration%20course"
               class="btn-whatsapp btn-whatsapp-lg"
               target="_blank"
               @click="trackWhatsAppClick"
@@ -447,7 +447,7 @@
           </div>
           <div class="footer-contact">
             <h4>{{ $t('footer.contact') }}</h4>
-            <p><a href="https://wa.me/60135961559">WhatsApp: +6013-596 1559</a></p>
+            <p><a href="https://wa.me/601159816620">WhatsApp: +6011-5981 6620</a></p>
             <p><a href="tel:+60327262436">Office: +603-2726 2436</a></p>
             <p><a href="mailto:info@innovative.edu.my">info@innovative.edu.my</a></p>
             <p class="footer-address">{{ $t('footer.address') }}</p>

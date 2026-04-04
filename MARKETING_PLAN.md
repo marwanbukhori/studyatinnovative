@@ -14,7 +14,7 @@
 | Decision | Answer |
 |----------|--------|
 | Pricing story | Ongoing promo (no real deadline) — frame as "Harga Promosi" with limited spots language |
-| WhatsApp number | +60135961559 is Marwan's personal/sales line (keep as primary CTA) |
+| WhatsApp number | +601159816620 is Marwan's personal/sales line (keep as primary CTA) |
 | Office contacts | +603-2726 2436, info@innovative.edu.my (add to footer for credibility) |
 | Marwan's role | Staff / marketing team — full authority to represent Innovative UC |
 | Existing accounts | Meta Business Suite only. Need to create GA4 + TikTok Ads |

@@ -18,7 +18,7 @@
       </div>
       <div class="wa-actions">
         <a
-          :href="'https://wa.me/60135961559?text=' + encodeURIComponent($t('widget.prefill_interest'))"
+          :href="'https://wa.me/601159816620?text=' + encodeURIComponent($t('widget.prefill_interest'))"
           class="wa-action-btn"
           target="_blank"
           @click="track('interest')"
@@ -26,7 +26,7 @@
           {{ $t('widget.btn_interest') }}
         </a>
         <a
-          :href="'https://wa.me/60135961559?text=' + encodeURIComponent($t('widget.prefill_payment'))"
+          :href="'https://wa.me/601159816620?text=' + encodeURIComponent($t('widget.prefill_payment'))"
           class="wa-action-btn"
           target="_blank"
           @click="track('payment')"
@@ -34,7 +34,7 @@
           {{ $t('widget.btn_payment') }}
         </a>
         <a
-          :href="'https://wa.me/60135961559?text=' + encodeURIComponent($t('widget.prefill_question'))"
+          :href="'https://wa.me/601159816620?text=' + encodeURIComponent($t('widget.prefill_question'))"
           class="wa-action-btn"
           target="_blank"
           @click="track('question')"
