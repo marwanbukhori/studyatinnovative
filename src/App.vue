@@ -1,4 +1,9 @@
+<script setup>
+import { Analytics } from '@vercel/analytics/vue';
+</script>
+
 <template>
+  <Analytics />
   <div id="app">
     <!-- Navigation -->
     <nav class="navbar">
