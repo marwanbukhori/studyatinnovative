@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "verify:prerender": "grep -q 'hero-title' dist/index.html && echo 'prerender OK' || (echo 'prerender FAILED' && exit 1)"
   },
   "keywords": [
     "vue",
@@ -24,5 +25,9 @@
     "vue": "^3.5.21",
     "vue-i18n": "^9.14.5",
     "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@prerenderer/renderer-puppeteer": "^1.2.4",
+    "@prerenderer/rollup-plugin": "^0.3.12"
   }
 }

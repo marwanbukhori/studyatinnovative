@@ -5,6 +5,12 @@ import i18n from "./i18n";
 import "./styles/main.css";
 import "./utils/tracking";
 
-inject();
+const isPrerender = /HeadlessChrome/.test(navigator.userAgent);
+if (!isPrerender) inject();
 
-createApp(App).use(i18n).mount("#app");
+const app = createApp(App).use(i18n);
+app.mount("#app");
+
+requestAnimationFrame(() => {
+  document.dispatchEvent(new Event("app-rendered"));
+});
