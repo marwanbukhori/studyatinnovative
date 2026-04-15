@@ -461,14 +461,16 @@
     </footer>
 
     <WhatsAppWidget />
+    <SpeedInsights />
   </div>
 </template>
 
 <script>
 import WhatsAppWidget from "./components/WhatsAppWidget.vue";
+import { SpeedInsights } from '@vercel/speed-insights/vue';
 
 export default {
-  components: { WhatsAppWidget },
+  components: { WhatsAppWidget, SpeedInsights },
   name: "App",
   data() {
     return {
