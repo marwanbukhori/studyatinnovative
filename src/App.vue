@@ -5,7 +5,7 @@
       <div class="nav-container">
         <div class="nav-brand">
           <a href="#">
-            <img src="/assets/innovative.png" alt="Innovative University College" class="nav-logo" />
+            <img src="/assets/innovative.png" alt="Innovative University College" class="nav-logo" width="855" height="292" decoding="async" />
           </a>
         </div>
         <div class="nav-menu" :class="{ active: mobileMenuOpen }">
@@ -31,7 +31,7 @@
       <div class="hero-container">
         <div class="hero-content">
           <div class="hero-brand">
-            <img src="/assets/innovative.png" alt="Innovative University College" class="hero-logo" />
+            <img src="/assets/innovative.png" alt="Innovative University College" class="hero-logo" width="855" height="292" fetchpriority="high" decoding="async" />
             <div class="accreditation-badge">
               <span class="badge-icon">🎓</span>
               <div class="badge-content">
@@ -111,19 +111,19 @@
           <p class="partners-title">{{ $t('trust.partners') }}</p>
           <div class="partners-logos">
             <div class="partner-item">
-              <img src="/assets/partners/yeg.webp" alt="YEG" />
+              <img src="/assets/partners/yeg.webp" alt="YEG — Young Entrepreneurs Group partner logo" width="2048" height="654" loading="lazy" decoding="async" />
             </div>
             <div class="partner-item">
-              <img src="/assets/partners/richworks.jpg" alt="Richworks" />
+              <img src="/assets/partners/richworks.jpg" alt="Richworks partner logo" width="2560" height="1235" loading="lazy" decoding="async" />
             </div>
             <div class="partner-item">
-              <img src="/assets/partners/seg.png" alt="SEG" />
+              <img src="/assets/partners/seg.png" alt="SEG — Sunway Education Group partner logo" width="400" height="191" loading="lazy" decoding="async" />
             </div>
             <div class="partner-item">
-              <img src="/assets/partners/ismsa.webp" alt="ISM Shah Alam" />
+              <img src="/assets/partners/ismsa.webp" alt="ISM Shah Alam partner logo" width="768" height="245" loading="lazy" decoding="async" />
             </div>
             <div class="partner-item">
-              <img src="/assets/partners/ypr.jpeg" alt="YPR" />
+              <img src="/assets/partners/ypr.jpeg" alt="Yayasan Pendidikan Rakyat (YPR) partner logo" width="900" height="900" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -243,7 +243,7 @@
             </div>
           </div>
           <div class="program-image">
-            <img src="/assets/convocation.webp" alt="Convocation ceremony" />
+            <img src="/assets/convocation.webp" alt="Innovative University College convocation ceremony graduates" width="2560" height="1437" loading="lazy" decoding="async" />
           </div>
         </div>
 
@@ -431,7 +431,7 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-brand">
-            <img src="/assets/innovative.png" alt="Innovative University College" class="footer-logo" />
+            <img src="/assets/innovative.png" alt="Innovative University College" class="footer-logo" width="855" height="292" loading="lazy" decoding="async" />
             <p>{{ $t('footer.tagline') }}</p>
             <p class="footer-mqa">{{ $t('footer.mqa') }}</p>
             <p class="footer-vc">{{ $t('footer.vc') }}</p>
