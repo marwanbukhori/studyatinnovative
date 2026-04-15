@@ -72,6 +72,7 @@
               href="https://wa.me/601159816620?text=I'm%20interested%20in%20the%20Diploma%20in%20Business%20Administration%20course"
               class="btn-whatsapp"
               target="_blank"
+              rel="noopener"
               @click="trackWhatsAppClick"
             >
               <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -362,6 +363,7 @@
               href="https://wa.me/601159816620?text=I'm%20interested%20in%20the%20Diploma%20in%20Business%20Administration%20course"
               class="btn-whatsapp btn-whatsapp-lg"
               target="_blank"
+              rel="noopener"
               @click="trackWhatsAppClick"
             >
               <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -384,6 +386,7 @@
                 href="https://forms.gle/KfWBWcRkXRZyxq8k7"
                 class="btn-primary"
                 target="_blank"
+                rel="noopener"
               >
                 {{ $t('apply.form_btn') }}
               </a>
