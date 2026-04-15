@@ -3,7 +3,7 @@ import vue from "@vitejs/plugin-vue";
 import prerender from "@prerenderer/rollup-plugin";
 import { messages } from "./src/i18n/index.js";
 
-const SITE_URL = "https://studyatinnovative.com";
+const SITE_URL = "https://studyatinnovative.my";
 
 function buildStructuredData() {
   const org = {
