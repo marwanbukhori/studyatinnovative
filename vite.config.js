@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { messages } from "./src/i18n/index.js";
 
-const SITE_URL = "https://studyatinnovative.my";
+const SITE_URL = "https://www.studyatinnovative.my";
 
 function buildStructuredData() {
   const org = {

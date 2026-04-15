@@ -1,5 +1,5 @@
-# https://studyatinnovative.my/robots.txt
+# https://www.studyatinnovative.my/robots.txt
 User-agent: *
 Allow: /
 
-Sitemap: https://studyatinnovative.my/sitemap.xml
+Sitemap: https://www.studyatinnovative.my/sitemap.xml
