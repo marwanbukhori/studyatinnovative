@@ -53,22 +53,16 @@
 </template>
 
 <script>
+import { trackWhatsAppClick } from "../utils/tracking";
+
 export default {
   name: "WhatsAppWidget",
   data() {
-    return {
-      isOpen: false,
-    };
+    return { isOpen: false };
   },
   methods: {
     track(context) {
-      if (typeof fbq !== "undefined") fbq("track", "Contact");
-      if (typeof gtag !== "undefined")
-        gtag("event", "whatsapp_click", {
-          event_category: "engagement",
-          event_label: "widget_" + context,
-        });
-      if (typeof ttq !== "undefined") ttq.track("Contact");
+      trackWhatsAppClick("widget_" + context);
     },
   },
 };

@@ -103,8 +103,14 @@ function buildStructuredData() {
 function seoStructuredData() {
   return {
     name: "seo-structured-data",
-    transformIndexHtml(html) {
-      return html.replace("<!-- __JSON_LD__ -->", buildStructuredData());
+    transformIndexHtml: {
+      order: "pre",
+      handler(html) {
+        const pixelId = process.env.VITE_META_PIXEL_ID || "";
+        return html
+          .replace("<!-- __JSON_LD__ -->", buildStructuredData())
+          .replaceAll("%VITE_META_PIXEL_ID%", pixelId);
+      },
     },
   };
 }

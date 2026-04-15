@@ -61,10 +61,12 @@
     window.__IS_PRERENDER__ = /HeadlessChrome|jsdom/i.test(navigator.userAgent);
   </script>
 
-  <!-- Meta Pixel Code -->
-  <!-- TODO: Replace YOUR_PIXEL_ID with real Meta Pixel ID from Meta Business Suite -->
+  <!-- Meta Pixel Code — ID injected from VITE_META_PIXEL_ID at build time -->
   <script>
-  if (!window.__IS_PRERENDER__) {
+  (function () {
+    var pixelId = '%VITE_META_PIXEL_ID%';
+    if (window.__IS_PRERENDER__) return;
+    if (!/^\d{10,20}$/.test(pixelId)) return; // skip if env var not set
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
@@ -76,9 +78,9 @@
       s.parentNode.insertBefore(t, s)
     }(window, document, 'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('init', pixelId);
     fbq('track', 'PageView');
-  }
+  })();
   </script>
   <!-- End Meta Pixel Code -->
 
@@ -126,7 +128,7 @@
 <body>
   <!-- Facebook Pixel noscript fallback -->
   <noscript>
-    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" />
+    <img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=%VITE_META_PIXEL_ID%&ev=PageView&noscript=1" />
   </noscript>
 
   <div id="app"></div>

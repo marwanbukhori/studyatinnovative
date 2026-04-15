@@ -373,8 +373,8 @@
             </a>
             <p class="apply-or">{{ $t('apply.contact') }}</p>
             <div class="apply-contacts">
-              <a href="tel:+60327262436">📞 +603-2726 2436</a>
-              <a href="mailto:info@innovative.edu.my">✉️ info@innovative.edu.my</a>
+              <a href="tel:+60327262436" @click="trackPhoneClick">📞 +603-2726 2436</a>
+              <a href="mailto:info@innovative.edu.my" @click="trackEmailClick">✉️ info@innovative.edu.my</a>
             </div>
           </div>
           <div class="apply-form-alt">
@@ -387,6 +387,7 @@
                 class="btn-primary"
                 target="_blank"
                 rel="noopener"
+                @click="trackFormClick"
               >
                 {{ $t('apply.form_btn') }}
               </a>
@@ -451,8 +452,8 @@
           <div class="footer-contact">
             <h4>{{ $t('footer.contact') }}</h4>
             <p><a href="https://wa.me/601159816620">WhatsApp: +6011-5981 6620</a></p>
-            <p><a href="tel:+60327262436">Office: +603-2726 2436</a></p>
-            <p><a href="mailto:info@innovative.edu.my">info@innovative.edu.my</a></p>
+            <p><a href="tel:+60327262436" @click="trackPhoneClick">Office: +603-2726 2436</a></p>
+            <p><a href="mailto:info@innovative.edu.my" @click="trackEmailClick">info@innovative.edu.my</a></p>
             <p class="footer-address">{{ $t('footer.address') }}</p>
             <p class="footer-hours">{{ $t('footer.hours') }}</p>
           </div>
@@ -469,6 +470,12 @@
 
 <script>
 import WhatsAppWidget from "./components/WhatsAppWidget.vue";
+import {
+  trackWhatsAppClick as fireWhatsAppClick,
+  trackFormClick as fireFormClick,
+  trackPhoneClick as firePhoneClick,
+  trackEmailClick as fireEmailClick,
+} from "./utils/tracking";
 
 export default {
   components: { WhatsAppWidget },
@@ -533,15 +540,10 @@ export default {
       this.$i18n.locale = newLocale;
       localStorage.setItem("locale", newLocale);
     },
-    trackWhatsAppClick() {
-      if (typeof fbq !== "undefined") fbq("track", "Contact");
-      if (typeof gtag !== "undefined")
-        gtag("event", "whatsapp_click", {
-          event_category: "engagement",
-          event_label: "whatsapp_cta",
-        });
-      if (typeof ttq !== "undefined") ttq.track("Contact");
-    },
+    trackWhatsAppClick() { fireWhatsAppClick("cta"); },
+    trackFormClick() { fireFormClick("apply_form"); },
+    trackPhoneClick() { firePhoneClick(); },
+    trackEmailClick() { fireEmailClick(); },
   },
 };
 </script>
