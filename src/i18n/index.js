@@ -1,6 +1,6 @@
 import { createI18n } from "vue-i18n";
 
-const messages = {
+export const messages = {
   en: {
     nav: {
       home: "Home",
@@ -329,9 +329,16 @@ const messages = {
   },
 };
 
+let savedLocale = null;
+try {
+  savedLocale = globalThis.localStorage?.getItem?.("locale") ?? null;
+} catch {
+  savedLocale = null;
+}
+
 const i18n = createI18n({
   legacy: false,
-  locale: localStorage.getItem("locale") || "ms",
+  locale: savedLocale || "ms",
   fallbackLocale: "en",
   messages,
 });
