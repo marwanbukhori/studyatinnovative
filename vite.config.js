@@ -1,6 +1,5 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import prerender from "@prerenderer/rollup-plugin";
 import { messages } from "./src/i18n/index.js";
 
 const SITE_URL = "https://studyatinnovative.my";
@@ -111,26 +110,7 @@ function seoStructuredData() {
 }
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    seoStructuredData(),
-    prerender({
-      routes: ["/"],
-      renderer: "@prerenderer/renderer-puppeteer",
-      rendererOptions: {
-        renderAfterDocumentEvent: "app-rendered",
-        maxConcurrentRoutes: 1,
-        headless: true,
-      },
-      postProcess(renderedRoute) {
-        renderedRoute.html = renderedRoute.html.replace(
-          /<script[^>]*src="[^"]*googletagmanager[^"]*"[^>]*><\/script>/g,
-          ""
-        );
-        return renderedRoute;
-      },
-    }),
-  ],
+  plugins: [vue(), seoStructuredData()],
   server: {
     port: 3000,
     open: true,

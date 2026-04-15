@@ -58,7 +58,7 @@
 
   <!-- Skip analytics during prerender/headless crawl -->
   <script>
-    window.__IS_PRERENDER__ = /HeadlessChrome/.test(navigator.userAgent);
+    window.__IS_PRERENDER__ = /HeadlessChrome|jsdom/i.test(navigator.userAgent);
   </script>
 
   <!-- Meta Pixel Code -->
